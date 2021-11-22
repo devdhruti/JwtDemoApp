@@ -3,7 +3,7 @@ module Api
     class BaseController < ApplicationController
       protect_from_forgery with: :null_session
 
-      # response
+      # generic response
       def json_response(data, option = nil)
         if option.present?
           return render json: {success: true, data: data, meta_key: option, error: []}, status:200
@@ -12,7 +12,7 @@ module Api
         end
       end
 
-      # generic
+      # generic exception
       rescue_from Exception do |exception|
         render_exception exception, 422
       end

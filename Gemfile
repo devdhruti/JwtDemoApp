@@ -24,11 +24,13 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# JsonWebToken
+# use JsonWebToken
 gem 'jwt'
 
+# searialization
 gem 'fast_jsonapi'
 
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 
 # Use Active Storage variant
