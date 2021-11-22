@@ -16,11 +16,11 @@ module Api
 
         token = request.headers['HTTP_AUTHENTICATION_TOKEN'] || request.headers['Authentication_Token']
 
+        #validate user token
         @valid_token.validate!(token)
         @current_user = @valid_token.user
         @current_user_token = @valid_token.user_token
       end
-
     end
   end
 end
